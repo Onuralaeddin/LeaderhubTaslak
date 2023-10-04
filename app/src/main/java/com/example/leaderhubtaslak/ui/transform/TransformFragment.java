@@ -40,9 +40,9 @@ public class TransformFragment extends Fragment {
         binding = FragmentTransformBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        RecyclerView recyclerView = binding.recyclerviewTransform;
+        //RecyclerView recyclerView = binding.recyclerviewTransform;
         ListAdapter<String, TransformViewHolder> adapter = new TransformAdapter();
-        recyclerView.setAdapter(adapter);
+        //recyclerView.setAdapter(adapter);
         transformViewModel.getTexts().observe(getViewLifecycleOwner(), adapter::submitList);
         return root;
     }
